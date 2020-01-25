@@ -1009,8 +1009,8 @@ function fetchShipInfoAPI(){
     }
    
     console.log("Max Feature Size: " + maxFeatureSize);
-    // displayShipInfoAPI();
-    displayShipInfoAPI_innerHTML();
+    displayShipInfoAPI();
+    // displayShipInfoAPI_innerHTML();
 }
 
 
@@ -1048,6 +1048,20 @@ function displayShipInfo(){
 
 }
 
+function createClickHandler (myShip) {
+    return function() {
+        
+        alert(myShip.name+'\nCrew Size: '+ myShip.crew +
+                '\nCost (Galactic Credits): '+ ship.cost_in_credits +
+                '\nShip Length: '+ myShip.length +
+                '\nMax Speed: '+ myShip.max_atmosphering_speed +
+                '\nMax Passengers: ' +myShip.passengers +
+                '\nCargo Capacity: ' +myShip.cargo_capacity +
+                '\nHyperDrive Rating: '+myShip.hyperdrive_rating);
+
+    }
+};
+
 function displayShipInfoAPI(){
     console.log("Entering displayShipInfoAPI function");    
     let shipCount = displayShips.length;
@@ -1059,10 +1073,9 @@ function displayShipInfoAPI(){
             let shipBar = document.createElement('div');
             shipBar.textContent = ship.name;
             shipBar.classList.add('BarChart-bar');
-            shipBar.onclick = function (){
-                alert( ship.name +'\nCrew Size: '+ ship.crew);
-            };
-            shipBar.style = "height: "+ 100*(Number(ship.crew) / maxCrewSize) + "%";
+            
+            shipBar.onclick = createClickHandler(ship);
+            shipBar.style = "height: "+ 100*(Number(ship.crew) / maxFeatureSize) + "%";
             chartContainer.appendChild(shipBar);
         }
     }
