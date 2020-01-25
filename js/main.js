@@ -981,8 +981,8 @@ function fetchShipInfoObjData(){
 
 
 
-//  let apiShipIndices = [23, 59, 32, 52, 10];
-let apiShipIndices = [23];
+ let apiShipIndices = [23, 59, 32, 52, 10];
+// let apiShipIndices = [23];
 function fetchShipInfoAPI(){
     console.log("Entering fetchShipInfoAPI function");
     //before fetching anything, we have to make sure to update the indicies and the selected feature based on user input
