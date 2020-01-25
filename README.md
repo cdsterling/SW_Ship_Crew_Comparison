@@ -11,10 +11,20 @@ where <StarShipID#> is the id number for a starship. So for example https://swap
 
 This comparison is visualized using a bar graph.
 
+-----
+i found out, upon reading the howework, that we had the option for multiple dimensions. that being he case "Crewsize Comparison" is a bit of a misnomer. instead i have added the ability to compare on these different dimensions:
+* "Crew Size",
+* Cost (Galactic Credits)
+* Ship Length
+* Max Speed
+* Max Passengers
+* Cargo Capacity
+* HyperDrive Rating
+
 
 for the starfield background i googled and found this awesome one put together by Keith Clark: https://codepen.io/keithclark/pen/zqcEd . It seemed very pertinent to the star wars theme.
 
-note that i had to increase the z index of the bars in the bar chart in order for them to be clicked on.
+note that i had to increase the z index of the bars in the bar chart, the dropdown and all of the checkboxes in order for them to be clicked on.
 
 
 Files:
@@ -23,3 +33,5 @@ Files:
  * css
    * reset.css - nothing to see here yet
    * style.css - all of the css used in index.css
+ * js
+   * main.js - all of my javascript functions are here  
