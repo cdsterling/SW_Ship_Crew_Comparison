@@ -23,7 +23,20 @@
     width: 150px;
     transition: width .5s;
     
+}
 
+.BarChart-featureComparison{
+    position: relative;
+    color: antiquewhite;
+    z-index: 100;
+}
+.BarChart-shipSelection{
+    position: relative;
+    color: antiquewhite;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .BarChart-bar:hover{
